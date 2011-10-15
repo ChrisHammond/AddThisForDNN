@@ -49,6 +49,42 @@ namespace Christoc.Modules.AddThis {
         protected global::System.Web.UI.WebControls.TextBox txtPubid;
         
         /// <summary>
+        /// lblTwitterAccount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DotNetNuke.UI.UserControls.LabelControl lblTwitterAccount;
+        
+        /// <summary>
+        /// txtTwitterAccount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTwitterAccount;
+        
+        /// <summary>
+        /// lblStyleSelection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DotNetNuke.UI.UserControls.LabelControl lblStyleSelection;
+        
+        /// <summary>
+        /// ddlStyleSelection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlStyleSelection;
+        
+        /// <summary>
         /// lblBitlyLogin control.
         /// </summary>
         /// <remarks>
@@ -83,23 +119,5 @@ namespace Christoc.Modules.AddThis {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBitlyApi;
-        
-        /// <summary>
-        /// lblTwitterAccount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblTwitterAccount;
-        
-        /// <summary>
-        /// txtTwitterAccount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTwitterAccount;
     }
 }

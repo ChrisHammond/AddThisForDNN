@@ -12,9 +12,20 @@
         <div class="dnnFormItem">
 			<dnn:label id="lblPubid" runat="server" controlname="txtPubid" suffix=":" />
 			<asp:TextBox ID="txtPubid" runat="server" TextMode="SingleLine" />
-		</div>	
-
+		</div>
         <div class="dnnFormItem">
+			<dnn:label id="lblTwitterAccount" runat="server" controlname="txtTwitterAccount" suffix=":" />
+			<asp:TextBox ID="txtTwitterAccount" runat="server" TextMode="SingleLine" />
+		</div>	
+        <div class="dnnFormItem">
+			<dnn:label id="lblStyleSelection" runat="server" controlname="ddlStyleSelection" suffix=":" />
+			<asp:DropDownList ID="ddlStyleSelection" runat="server" />
+		</div>
+
+	</fieldset>
+    <h2 id="dnnSitePanel-UrlShortener" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("UrlShortener")%></a></h2>
+	<fieldset>
+		<div class="dnnFormItem">
 			<dnn:label id="lblBitlyLogin" runat="server" controlname="txtBitlyLogin" suffix=":" />
 			<asp:TextBox ID="txtBitlyLogin" runat="server" TextMode="SingleLine" />
 		</div>	
@@ -22,10 +33,6 @@
         <div class="dnnFormItem">
 			<dnn:label id="lblBitlyApi" runat="server" controlname="txtBitlyApi" suffix=":" />
 			<asp:TextBox ID="txtBitlyApi" runat="server" TextMode="SingleLine" />
-		</div>	
-        <div class="dnnFormItem">
-			<dnn:label id="lblTwitterAccount" runat="server" controlname="txtTwitterAccount" suffix=":" />
-			<asp:TextBox ID="txtTwitterAccount" runat="server" TextMode="SingleLine" />
 		</div>	
 
 	</fieldset>
