@@ -14,6 +14,7 @@ using System;
 using System.Web;
 using DotNetNuke.Framework;
 using DotNetNuke.Services.Exceptions;
+using DotNetNuke.Services.Localization;
 
 
 namespace Christoc.Modules.AddThis
@@ -121,7 +122,19 @@ namespace Christoc.Modules.AddThis
                 l.Target = "_blank";
                 
                 //setup the "text" value for the link, in the future this might be an image
-                l.Text = service;
+                if (Settings.Contains("IconSet"))
+                {
+                    //get image url
+                    //todo: should verify if we are SSL or not
+                    //todo: don't hardcode the size in here
+
+                    var imageUrl = String.Format("http://{0}/desktopmodules/addthis/icons/{1}/32x32/{2}.png", PortalSettings.PortalAlias.HTTPAlias, Settings["IconSet"], service);
+
+                    l.Text = String.Format("<img src=\"{0}\" alt=\"{1}{2}\"", imageUrl,Localization.GetString("ShareWith",LocalResourceFile),service);
+                }
+                else
+                    l.Text = service;
+
                 
                 //add the link to the placeholder
                 phAddThis.Controls.Add(l);

@@ -153,4 +153,25 @@
   <data name="lblTwitterAccount.Text" xml:space="preserve">
     <value>Twitter Account</value>
   </data>
+  <data name="IconSet1.Text" xml:space="preserve">
+    <value>Set 1</value>
+  </data>
+  <data name="IconSet2.Text" xml:space="preserve">
+    <value>Set 2</value>
+  </data>
+  <data name="IconSet3.Text" xml:space="preserve">
+    <value>Set 3</value>
+  </data>
+  <data name="lblStyleSelection.Help" xml:space="preserve">
+    <value>Choose from predefined Icons</value>
+  </data>
+  <data name="lblStyleSelection.Text" xml:space="preserve">
+    <value>Icon Selection</value>
+  </data>
+  <data name="NoIconSet.Text" xml:space="preserve">
+    <value>None (Text Only)</value>
+  </data>
+  <data name="UrlShortener.Text" xml:space="preserve">
+    <value>URL Shortening</value>
+  </data>
 </root>

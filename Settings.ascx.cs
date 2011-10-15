@@ -11,8 +11,10 @@
 */
 
 using System;
+using System.Web.UI.WebControls;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Entities.Modules;
+using DotNetNuke.Services.Localization;
 
 
 namespace Christoc.Modules.AddThis
@@ -39,11 +41,14 @@ namespace Christoc.Modules.AddThis
             {
                 if (Page.IsPostBack == false)
                 {
+                    //populate the icon listing
 
-
+                    ddlStyleSelection.Items.Add(new ListItem(Localization.GetString("NoIconSet.Text", LocalResourceFile), "0"));
+                    ddlStyleSelection.Items.Add(new ListItem(Localization.GetString("IconSet1.Text", LocalResourceFile), "1"));
+                    ddlStyleSelection.Items.Add(new ListItem(Localization.GetString("IconSet2.Text", LocalResourceFile), "2"));
+                    ddlStyleSelection.Items.Add(new ListItem(Localization.GetString("IconSet3.Text", LocalResourceFile), "3"));
+                    
                     //TODO: allow for choosing of an ICON set
-
-
                     
                     if(Settings.Contains("Services"))
                     {
@@ -69,6 +74,12 @@ namespace Christoc.Modules.AddThis
                     {
                         txtTwitterAccount.Text = Settings["TwitterAccount"].ToString();
                     }
+
+                    if (Settings.Contains("IconSet"))
+                    {
+                        ddlStyleSelection.Items.FindByValue(Settings["IconSet"].ToString()).Selected = true;
+                    }
+
                 }
             }
             catch (Exception exc) //Module failed to load
@@ -92,7 +103,7 @@ namespace Christoc.Modules.AddThis
                 modules.UpdateModuleSetting(ModuleId, "BitlyApi", txtBitlyApi.Text.Trim());
                 modules.UpdateModuleSetting(ModuleId, "BitlyLogin", txtBitlyLogin.Text.Trim());
                 modules.UpdateModuleSetting(ModuleId, "TwitterAccount", txtTwitterAccount.Text.Trim());
-
+                modules.UpdateModuleSetting(ModuleId, "IconSet", ddlStyleSelection.SelectedValue);
                 
             }
             catch (Exception exc) //Module failed to load
